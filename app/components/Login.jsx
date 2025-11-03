@@ -1,30 +1,41 @@
-"use client"
-import React from 'react'
-import { toast } from 'react-toastify'
+"use client";
+import React from "react";
+import { toast } from "react-toastify";
 
 const Login = () => {
-    const clickHandle = (e) => {
-        e.preventDefault()
-        toast("Email Submitted Sucessfully", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: false,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-        })
-    }
-    return (
-        <form onSubmit={clickHandle} className=" flex justify-center items-center flex-col gap-[2rem] w-[380px] ">
-            <div className="grp flex justify-center items-start flex-col  gap-2 w-[100%]  ">
-                <label className=" text-gray-500">Email Address</label>
-                <input type="text" className=" bg-gray-100 w-[100%] p-2" />
-            </div>
-            <button className=" w-[100%] bg-[#27AE60] p-2" >Sumbit</button>
-        </form>
-    )
-}
+  const clickHandle = (e) => {
+    e.preventDefault();
+    toast("Email Submitted Successfully", {
+      position: "top-center",
+      autoClose: 3000,
+      theme: "light",
+    });
+  };
 
-export default Login
+  return (
+    <form
+      onSubmit={clickHandle}
+      className="flex justify-center items-center flex-col gap-6 w-full max-w-[100%] px-4"
+    >
+      {/* Input Group */}
+      <div className="flex flex-col gap-2 w-full">
+        <label className="text-gray-600 text-sm font-medium">Email Address</label>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          className="bg-gray-100 w-full p-3 rounded-md outline-none focus:ring-2 focus:ring-[#27AE60] transition-all"
+        />
+      </div>
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        className="w-full bg-[#27AE60] text-white font-semibold p-3 rounded-md hover:bg-[#219150] transition-all"
+      >
+        Submit
+      </button>
+    </form>
+  );
+};
+
+export default Login;

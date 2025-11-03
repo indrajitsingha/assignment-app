@@ -1,30 +1,42 @@
 import Image from "next/image";
 import Login from "./components/Login";
+import { ToastContainer } from "react-toastify";
 
-import { ToastContainer } from 'react-toastify';
-
-// #27AE60
 export default function Home() {
   return (
-    <section className=" h-[100vh] w-[100%] flex justify-center items-center ">
-      <div className="  bg-[#27AE60]  w-[50%] h-[100%] flex justify-start items-start flex-col ">
-        <div className="text-xl  p-10 ">Mirror</div>
-        <div className=" p-10 w-[400px] ">
-          <h1 className=" text-[32px]  font-semibold">Lorem ipsum dolor sit amet.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, sed?</p>
+    <section className="h-[100vh] w-[100%] flex flex-col md:flex-row justify-center items-center">
+      {/* Left Section */}
+      <div className="bg-[#27AE60] w-[100%] md:w-[50%] h-[50vh] md:h-[100vh] flex justify-start items-start flex-col text-white">
+        <div className="text-[4vw] md:text-[2vw] font-semibold p-[5%]">
+          Mirror
         </div>
-      </div>
-      <div className="  bg-white  w-[50%] h-[100%] flex justify-center items-center ">
-        <div className=" flex justify-center items-center w-[100%]  flex-col ">
 
-          <div className=" w-[380px] mb-5  border-b-2 py-5">
-            <h1 className=" text-[25px] text-black font-semibold">Access to your Account</h1>
-            <p className=" text-gray-500 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, sed?</p>
-          </div>
-          <Login/>
+        <div className="p-[5%] w-[90%] md:w-[70%]">
+          <h1 className="text-[5vw] md:text-[2vw] font-semibold leading-tight mb-[2%]">
+            Lorem ipsum dolor sit amet.
+          </h1>
+          <p className="text-[3.5vw] md:text-[1vw] text-gray-100">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor rem harum incidunt magnam ea perferendis sunt ipsum vitae dolores sapiente!
+          </p>
         </div>
       </div>
-      <ToastContainer/>
+
+      {/* Right Section */}
+      <div className="bg-white w-[100%] md:w-[50%] h-[50vh] md:h-[100vh] flex justify-center items-center">
+        <div className="flex justify-center items-center w-[90%] md:w-[60%] flex-col">
+          <div className="w-[100%] mb-[5%] border-b-2 py-[3%] text-center md:text-left">
+            <h1 className="text-[5vw] md:text-[1.8vw] text-black font-semibold mb-[2%]">
+              Access to your Account
+            </h1>
+            <p className="text-gray-500 text-[3.5vw] md:text-[1vw]">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, sed?
+            </p>
+          </div>
+          <Login />
+        </div>
+      </div>
+
+      <ToastContainer />
     </section>
   );
 }
