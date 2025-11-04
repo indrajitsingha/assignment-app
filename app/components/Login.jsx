@@ -5,7 +5,8 @@ import { toast } from "react-toastify";
 const Login = () => {
   const clickHandle = (e) => {
     e.preventDefault();
-    toast("Email Submitted Successfully", {
+    // This toast logic should be moved into a custom hook for easy reuse
+    toast.success("Email Submitted Successfully", {
       position: "top-center",
       autoClose: 3000,
       theme: "light",
